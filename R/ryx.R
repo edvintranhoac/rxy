@@ -1,4 +1,20 @@
+#' Compute and explore correlations between different variables
 
+#'@description
+
+#'@details
+
+#'@param data A data frame
+#'@param y A numeric variable
+#'@param x One ore more numeric variables
+
+#'@import ggplot2 ggplot
+
+#'@export
+
+#'@examples
+
+#' put examples here
 
 ryx <- function(data, y, x){
   if(missing(x)){
@@ -23,4 +39,47 @@ ryx <- function(data, y, x){
   return(results)
 }
 
+library(MASS)
+x <- ryx(Boston, y="medv")
+
+print <- function(x) {
+  df <- x$df
+
+  df$r <- round(df$r, 3)
+  df$p <- signif(df$p, 3)
+
+  cat(paste0("Correlations of ", x$y, " with\n"))
+  base::print(df, row.names = FALSE)
+}
+
+summary <- function(x) {
+  medcorr <- round(median(x$df$r), 3)
+  mincorr <- round(min(x$df$r), 3)
+  maxcorr <- round(max(x$df$r), 3)
+  count_insig <- sum(x$df$sigif == " ")
+  n_x <- length(x$df$variable)
+
+  cat("Correlating", x$y, "with", paste0(x$x),
+      "\nThe median absolute correlation was", medcorr, "with a range from",
+      mincorr, "to", maxcorr, "\n", n_x - count_insig, "out of", n_x,
+      "variables were significant at the p < 0.05 level.")
+}
+
+plot <- function(x) {
+
+  df <- x$df
+  df$sign <- ifelse(df$r >= 0, "positive", "negative")
+  df$absr <- abs(df$r)
+  df$variable <- factor(df$variable, levels = df$variable[order(df$absr)])
+
+  ggplot2::ggplot(df, aes(x = absr, y = variable, absr)) +
+    geom_point(aes(color = sign)) +
+    geom_segment(aes(x = 0, xend = absr, yend = variable), color = "gray") +
+    labs(x = "Correlation (absolute value)", y = "Variables") +
+    scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.1)) +
+    scale_color_manual(values = c("red", "blue")) +
+    theme_bw()
+}
+
+plot(x)
 
