@@ -5,8 +5,7 @@ Authors@R:
     person("Edvin", "Tran Hoac", , "etranhoac@wesleyan.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: Compute correlations between different variables, then plot the results or summarize the results in words.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: use_mit_license()
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
