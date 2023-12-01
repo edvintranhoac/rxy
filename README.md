@@ -17,7 +17,7 @@ devtools::install_github("edvintranhoac/rxy")
 
 ## Example
 
-Here is an example of using the ryx function and then explore the results using helper functions:
+Here is an example of using the ryx function and then explorting the results using helper functions:
 
 ``` r
 library(rxy)

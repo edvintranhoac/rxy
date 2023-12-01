@@ -17,17 +17,23 @@ ryx(data, y, x)
 Results in a list
 }
 \description{
-This function calculates correlations between the specified numeric variables
-in the provided data frame. It computes correlation coefficients, performs
-hypothesis tests, summarizes the results, and generates plots for visualization.
+Use this package to calculate correlations between specified variables. It computes correlation coefficients,
+summarizes the results, and generates plots for visualization.
 }
 \examples{
 # Correlate mpg with the rest of the variables in mtcars
-x <- ryx(mtcars, y = "mpg")
+
+library(rxy)
+library(MASS)
+
+x <- ryx(Boston, y = "medv")
+
 # Print results
-rxy::print(x)
+print(x)
+
 # Summarize results in words
-rxy::summary(x)
+summary(x)
+
 # Plot results
-rxy::plot(x)
+plot(x)
 }

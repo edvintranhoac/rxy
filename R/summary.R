@@ -1,4 +1,8 @@
-summary <- function(x) {
+#'@export
+
+summary.ryx <- function(x) {
+  if(!inherits(x, "ryx")) stop("Must be class ryx")
+
   medcorr <- round(median(x$df$r), 3)
   mincorr <- round(min(x$df$r), 3)
   maxcorr <- round(max(x$df$r), 3)

@@ -1,4 +1,8 @@
-print <- function(x) {
+#'@export
+
+print.ryx <- function(x) {
+  if(!inherits(x, "ryx")) stop("Must be class ryx")
+
   df <- x$df
 
   df$r <- round(df$r, 3)
