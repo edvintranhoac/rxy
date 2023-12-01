@@ -25,9 +25,9 @@ hypothesis tests, summarizes the results, and generates plots for visualization.
 # Correlate mpg with the rest of the variables in mtcars
 x <- ryx(mtcars, y = "mpg")
 # Print results
-print(x)
+rxy::print(x)
 # Summarize results in words
-summary(x)
+rxy::summary(x)
 # Plot results
-plot(x)
+rxy::plot(x)
 }

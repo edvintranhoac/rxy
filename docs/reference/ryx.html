@@ -80,37 +80,14 @@ hypothesis tests, summarizes the results, and generates plots for visualization.
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Correlate mpg with the rest of the variables in mtcars</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">ryx</span><span class="op">(</span><span class="va">mtcars</span>, y <span class="op">=</span> <span class="st">"mpg"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># Print results</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "mpg"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $x</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "cyl"  "disp" "hp"   "drat" "wt"   "qsec" "vs"   "am"   "gear" "carb"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $df</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      variable          r            p sigif</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor4       wt -0.8676594 1.293959e-10   ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor       cyl -0.8521620 6.112687e-10   ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor1     disp -0.8475514 9.380327e-10   ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor2       hp -0.7761684 1.787835e-07   ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor3     drat  0.6811719 1.776240e-05   ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor6       vs  0.6640389 3.415937e-05   ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor7       am  0.5998324 2.850207e-04   ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor9     carb -0.5509251 1.084446e-03    **</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor8     gear  0.4802848 5.400948e-03    **</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> cor5     qsec  0.4186840 1.708199e-02     *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "ryx"</span>
+<span class="r-in"><span><span class="fu">rxy</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> 'print' is not an exported object from 'namespace:rxy'</span>
 <span class="r-in"><span><span class="co"># Summarize results in words</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Length Class      Mode     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> y   1     -none-     character</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> x  10     -none-     character</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> df  4     data.frame list     </span>
+<span class="r-in"><span><span class="fu">rxy</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> 'summary' is not an exported object from 'namespace:rxy'</span>
 <span class="r-in"><span><span class="co"># Plot results</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in xy.coords(x, y, xlabel, ylabel, log):</span> 'x' and 'y' lengths differ</span>
+<span class="r-in"><span><span class="fu">rxy</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> 'plot' is not an exported object from 'namespace:rxy'</span>
 </code></pre></div>
     </div>
   </div>
