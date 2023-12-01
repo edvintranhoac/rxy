@@ -2,8 +2,7 @@
 % Please edit documentation in R/ryx.R
 \name{ryx}
 \alias{ryx}
-\title{Compute and explore correlations between different variables
-Compute, summarize and plot correlations between variables}
+\title{Compute, summarize, and visualize correlations between variables}
 \usage{
 ryx(data, y, x)
 }
@@ -18,8 +17,9 @@ ryx(data, y, x)
 Results in a list
 }
 \description{
-Compute and explore correlations between different variables
-Compute, summarize and plot correlations between variables
+This function calculates correlations between the specified numeric variables
+in the provided data frame. It computes correlation coefficients, performs
+hypothesis tests, summarizes the results, and generates plots for visualization.
 }
 \examples{
 # Correlate mpg with the rest of the variables in mtcars
