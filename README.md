@@ -1,6 +1,8 @@
 
 # rxy
 
+<img src="scatter.png" width="200"/>
+
 <!-- badges: start -->
 <!-- badges: end -->
 
