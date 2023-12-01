@@ -5,7 +5,7 @@
 #'
 #'@param data A data frame
 #'@param y A numeric variable
-#'@param x One ore more numeric variables
+#'@param x One or more numeric variables
 #'@return Results in a list
 #'@import ggplot2
 #'@importFrom stats cor.test median

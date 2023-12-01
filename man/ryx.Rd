@@ -11,7 +11,7 @@ ryx(data, y, x)
 
 \item{y}{A numeric variable}
 
-\item{x}{One ore more numeric variables}
+\item{x}{One or more numeric variables}
 }
 \value{
 Results in a list
