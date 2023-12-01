@@ -1,15 +1,15 @@
-#' Compute and explore correlations between different variables
-
-#' Compute, summarize and plot correlations between variables
-
+#' Compute, summarize, and visualize correlations between variables
+#'
+#' This function calculates correlations between the specified numeric variables
+#' in the provided data frame. It computes correlation coefficients, performs
+#' hypothesis tests, summarizes the results, and generates plots for visualization.
+#'
 #'@param data A data frame
 #'@param y A numeric variable
 #'@param x One ore more numeric variables
 #'@return Results in a list
-
 #'@import ggplot2
 #'@importFrom stats cor.test median
-
 #'@export
 
 #'@examples

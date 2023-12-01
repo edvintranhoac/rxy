@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rxy is to ...
+The goal of rxy is to facilitate the exploration of correlations within a dataset.
 
 ## Installation
 
@@ -17,10 +17,20 @@ devtools::install_github("edvintranhoac/rxy")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Here is an example of using the ryx function and then explore the results using helper functions:
 
 ``` r
 library(rxy)
-## basic example code
+# Correlate mpg with the rest of the variables in mtcars
+x <- ryx(mtcars, y = "mpg")
+
+# Print results
+print(x)
+
+# Summarize results in words
+summary(x)
+
+# Plot results
+plot(x)
 ```
 
