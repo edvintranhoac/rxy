@@ -1,20 +1,27 @@
 #' Compute and explore correlations between different variables
 
-#'@description
-
-#'@details
+#' Compute, summarize and plot correlations between variables
 
 #'@param data A data frame
 #'@param y A numeric variable
 #'@param x One ore more numeric variables
+#'@return Results in a list
 
-#'@import ggplot2 ggplot
+#'@import ggplot2
+#'@importFrom stats cor.test median
 
 #'@export
 
 #'@examples
 
-#' put examples here
+#' # Correlate mpg with the rest of the variables in mtcars
+#' x <- ryx(mtcars, y = "mpg")
+#' # Print results
+#' print(x)
+#' # Summarize results in words
+#' summary(x)
+#' # Plot results
+#' plot(x)
 
 ryx <- function(data, y, x){
   if(missing(x)){
@@ -40,7 +47,7 @@ ryx <- function(data, y, x){
 }
 
 library(MASS)
-x <- ryx(Boston, y="medv")
+x <- ryx(mtcars, y="mpg")
 
 print <- function(x) {
   df <- x$df
@@ -66,13 +73,13 @@ summary <- function(x) {
 }
 
 plot <- function(x) {
-
+  require(ggplot2)
   df <- x$df
   df$sign <- ifelse(df$r >= 0, "positive", "negative")
   df$absr <- abs(df$r)
   df$variable <- factor(df$variable, levels = df$variable[order(df$absr)])
 
-  ggplot2::ggplot(df, aes(x = absr, y = variable, absr)) +
+  ggplot(df, aes(x = absr, y = variable, absr)) +
     geom_point(aes(color = sign)) +
     geom_segment(aes(x = 0, xend = absr, yend = variable), color = "gray") +
     labs(x = "Correlation (absolute value)", y = "Variables") +
@@ -81,5 +88,4 @@ plot <- function(x) {
     theme_bw()
 }
 
-plot(x)
 
