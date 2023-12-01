@@ -15,6 +15,7 @@
 #'@examples
 
 #' # Correlate mpg with the rest of the variables in mtcars
+#' library(rxy)
 #' x <- ryx(mtcars, y = "mpg")
 #' # Print results
 #' print(x)
