@@ -1,10 +1,10 @@
 Package: rxy
-Title: What the Package Does (One Line, Title Case)
+Title: Compute and explore correlations between different variables
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Edvin", "Tran Hoac", , "etranhoac@wesleyan.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Compute correlations between different variables, then plot the results or summarize the results in words.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
