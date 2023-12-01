@@ -46,9 +46,6 @@ ryx <- function(data, y, x){
   return(results)
 }
 
-library(MASS)
-x <- ryx(mtcars, y="mpg")
-
 print <- function(x) {
   df <- x$df
 
