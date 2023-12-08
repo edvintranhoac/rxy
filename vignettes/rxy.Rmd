@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 The `rxy` package helps compute and explore correlations between variables.
 
-The package has one main function to screen out screen out predictor variables that have a non-significant relationship with the outcome variable in the specified formula.
+The package has one main function to screen out predictor variables that have a non-significant relationship with the outcome variable in the specified formula.
 
 ```{r setup}
 library(rxy)
