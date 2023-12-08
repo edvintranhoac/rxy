@@ -13,7 +13,7 @@
 
 #'@examples
 
-#' # Correlate mpg with the rest of the variables in the Boston dataset
+#' # Correlate medv with the rest of the variables in the Boston dataset
 #'
 #' library(rxy)
 #' library(MASS)

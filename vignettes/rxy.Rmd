@@ -21,7 +21,7 @@ The package has one main function to screen out predictor variables that have a 
 ```{r setup}
 library(rxy)
 
-# Correlate mpg with the rest of the variables in the Boston dataset
+# Correlate medv with the rest of the variables in the Boston dataset
 
 library(MASS)
 
