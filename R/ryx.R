@@ -13,7 +13,7 @@
 
 #'@examples
 
-#' # Correlate mpg with the rest of the variables in mtcars
+#' # Correlate mpg with the rest of the variables in the Boston dataset
 #'
 #' library(rxy)
 #' library(MASS)
