@@ -21,7 +21,7 @@ Use this package to calculate correlations between specified variables. It compu
 summarizes the results, and generates plots for visualization.
 }
 \examples{
-# Correlate mpg with the rest of the variables in mtcars
+# Correlate mpg with the rest of the variables in the Boston dataset
 
 library(rxy)
 library(MASS)
